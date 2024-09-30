@@ -177,7 +177,7 @@ class MetarConv extends Metar
 	//echo "\n"."Изменение погоды"."\n";
 	private function convCloudsReport($str) {
 		//приведение строки к нижнему регистру
-		$str = mb_strtolower($str);
+		$str = strtolower($str);
 		//echo $str;
 		
 		//список поисковых фраз
@@ -319,7 +319,7 @@ class MetarConv extends Metar
 			$pattern = '/\s+('.implode("|", $arr_separators).')\s+/i';
 			$replacement = '$1 ';
 			$str_translated = preg_replace($pattern, $replacement, $str_translated);  //удаляем пробел перед знаком разделителя
-			$str_translated = mb_strtoupper(substr($str_translated, 0, 2), "UTF-8").substr($str_translated, 2);  //регистр первой буквы на UTF-8
+			$str_translated = strtoupper(substr($str_translated, 0, 2)).substr($str_translated, 2);  //регистр первой буквы на UTF-8
 		}
 		return $str_translated;
 	}
