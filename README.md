@@ -12,5 +12,5 @@ Copy all files to your repository on web server. Change the variable raw to get 
 
 Links:
 - https://mediawiki.ivao.aero/index.php?title=METAR_explanation
+- https://git.dev.hsdn.org/pub/metar-taf
 - http://woody.cowpi.com/phpscripts/
-- http://www.hsdn.org/
