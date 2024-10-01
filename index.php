@@ -35,9 +35,6 @@ $arr_new_line = array("\n", "\r\n");  //специальные символы
 $raw = str_replace($arr_new_line, '', $raw);
 
 // Create class instance for parse METAR string with debug output enable
-//$metar = new Metar($raw, FALSE, TRUE);
-
-// Create class instance for parse METAR string with debug output enable
 $metarConv = new MetarConv($raw, FALSE, TRUE);
 
 // Parse METAR

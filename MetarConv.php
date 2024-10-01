@@ -19,7 +19,7 @@ class MetarConv extends Metar
 
 	//Пост обработка полученных результатов
 	//DATAS` date NOT NULL DEFAULT '1000-01-01'
-	//echo "\n"."<br>Дата получения данных"."\n";
+	//echo "\n\n"."Дата получения данных"."\n";
 	private function convDate($date_time) {
 		date_default_timezone_set('UTC'); //временная зона по умолчанию
 		if (isset($date_time)) {
@@ -327,14 +327,13 @@ class MetarConv extends Metar
 	public function convParam() {
 		//Пост обработка результатов, полученных из родительского класса
 		//DATAS` date NOT NULL DEFAULT '1000-01-01'
-		//echo "\n"."<br>Дата получения данных"."\n";
+		//echo "\n\n"."Дата получения данных"."\n";
 		$this->observed_date = $this->convDate($this->observed_date);
 
 		//TIMES` time NOT NULL DEFAULT '00:00:00'
 		//echo "\n"."Срок наблюдения, UTC"."\n";
 		$this->observed_time = $this->convTime($this->observed_time);
 
-		//Новый параметр - дата в классическом формате
 		//DateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 		//echo "\n"."Дата и время"."\n";
 		//echo $this->observed_date;
